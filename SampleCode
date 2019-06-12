@@ -1,1 +1,35 @@
-//Hello World Hello W//
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	  int number=0, temp=0,digit=0,SumOfDigits=0,ProductOfDigits=1,Result=0;  
+	  Scanner in = new Scanner(System.in);
+     
+      System.out.println("Enter a 2 Digit integer : ");
+      number = in.nextInt();
+      temp=number;
+	while(temp>0)
+	{
+	 digit=temp%10;
+	 SumOfDigits=SumOfDigits+digit;
+	 ProductOfDigits=ProductOfDigits*digit;
+	 temp=temp/10;
+	}
+	
+	Result=SumOfDigits + ProductOfDigits;
+	
+	if(Result==number)
+	{
+	    System.out.println("The SUMMATION of Product of Digits and Sum of Digits : " + Result);
+	    System.out.println("Conclusion : The Summation of Product of Digits and Sum of Digits is equal to the given number");
+	}
+	
+	else
+	{
+	    System.out.println("The SUMMATION of Product of Digits and Sum of Digits : " + Result);
+	    System.out.println("Conclusion : The Summation of Product of Digits and Sum of Digits is not equal to the given number");
+	}
+	}
+}
+
